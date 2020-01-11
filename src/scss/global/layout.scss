@@ -1,0 +1,264 @@
+@font-face {
+  font-family: "PixelEd";
+  src: url("../assets/font/pixeled.ttf") format("truetype");
+}
+
+$bg-color: #c79d62;
+
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+section {
+  width: 700px;
+  height: 700px;
+  margin-left: 25%;
+  position: absolute;
+  z-index: 5000;
+}
+
+.avant {
+  background-image: url("../assets/img/bg-avant.png");
+}
+
+.apres {
+  background-image: url("../assets/img/bg-apres.png");
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(10, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.hidden-display {
+  display: none;
+}
+
+.visible-display {
+  display: block;
+}
+
+.kangoo {
+  background-image: url("../assets/img/kangoo-up.gif");
+  background-size: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.kangoo--down {
+  background-image: url("../assets/img/kangoo-down.gif");
+  background-size: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.kangoo--right {
+  background-image: url("../assets/img/kangoo-right.gif");
+  background-size: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.kangoo--left {
+  background-image: url("../assets/img/kangoo-left.gif");
+  background-size: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.tree {
+  background-image: url("../assets/img/tree.png");
+  background-size: cover;
+}
+
+.rock {
+  background-image: url("../assets/img/rock.png");
+  background-size: center;
+  background-repeat: no-repeat;
+  background-size: 80%;
+}
+
+.tree-on-fire {
+  background-image: url("../assets/img/treeonfire.png");
+  background-size: cover;
+}
+
+// .ashes {
+//   background-image: url("../assets/img/ashes.png");
+//   background-position: bottom;
+//   background-repeat: no-repeat;
+// }
+
+.fire {
+  background-image: url("../assets/img/fire.gif");
+  background-size: 100%;
+  background-position: top;
+}
+
+.end {
+  background-image: url("../assets/img/finish.png");
+  background-size: 100%;
+  background-position: bottom;
+  background-repeat: no-repeat;
+}
+
+.start {
+  background-color: yellow;
+}
+
+.baby {
+  background-image: url("../assets/img/baby.png");
+  background-position: center;
+  background-size: 50%;
+  background-repeat: no-repeat;
+}
+
+.babyhead {
+  background-image: url("../assets/img/babyhead.png");
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+// Levels
+
+.level {
+  background-color: rgba(255, 255, 255, 0.829);
+  height: 50px;
+  display: inline-block;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-family: "pixelEd";
+  font-size: 30px;
+  color: #695f4a;
+  position: absolute;
+  bottom: -100px;
+  left: 40%;
+  animation-name: goUp;
+  animation-timing-function: ease-in-out 5;
+  animation-iteration-count: inherit;
+  animation-delay: 0.3s;
+  animation-duration: 3s;
+  z-index: 8000;
+}
+@keyframes goUp {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(-500px);
+  }
+}
+
+.score {
+  position: absolute;
+  display: flex;
+  left: 1090px;
+  bottom: 100px;
+  width: 8 * 50px;
+  height: 50px;
+  z-index: 200;
+}
+
+.bg {
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  position: relative;
+  z-index: 10;
+}
+
+.bg--av {
+  background-image: url("../assets/img/forestbg.png");
+}
+
+.bg--ap {
+  background-image: url("../assets/img/forestfirebg.png");
+}
+
+.bg--classic {
+  background-color: $bg-color;
+}
+
+.story,
+.controls {
+  width: 231px;
+  height: 510px;
+  position: absolute;
+  z-index: 100;
+  left: 50px;
+  top: 5%;
+}
+
+.controls {
+  background-image: url("../assets/img/controls.png");
+}
+.story {
+  background-image: url("../assets/img/story.png");
+}
+
+.question {
+  position: absolute;
+  width: 230px;
+  height: 65px;
+  background-image: url("../assets/img/question.png");
+  background-position: center;
+  background-size: cover;
+  bottom: 5px;
+  left: 50px;
+  z-index: 120;
+}
+
+.gameover--section {
+  background-image: url("../assets/img/lostscreen.gif");
+}
+
+.home--section {
+  background-image: url("../assets/img/homescreen.gif");
+}
+
+.endgame--section {
+  background-image: url("../assets/img/winscreen.gif");
+}
+
+.life--bar {
+  z-index: 9000;
+  position: absolute;
+  width: 50px;
+  height: 320px;
+  border: 2px solid whitesmoke;
+  background: #eb2417;
+  overflow: hidden;
+  left: 1090px;
+  bottom: 300px;
+}
+
+.life--charge {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #5e9e49;
+  list-style: none;
+  transition: transform 0.2s ease-in;
+}
+
+.blink {
+  animation: blink 0.1s;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 100%;
+  }
+  50% {
+    opacity: 50%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
