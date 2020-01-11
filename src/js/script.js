@@ -575,6 +575,15 @@ function playerHasAllBabies() {
 }
 
 // AUDIO
+
+oxo.inputs.listenKey("s", () => {
+  if (soundMuted) {
+    soundMuted = false;
+  } else {
+    soundMuted = true;
+  }
+});
+
 let soundMuted = false;
 
 let fireSound = new Audio();
