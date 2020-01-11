@@ -438,10 +438,6 @@ function updateSpriteDirection(direction) {
   kangoo.classList = spriteClass;
 }
 
-function swipeSpriteKangoo(currElement, currElement) {
-  currPos;
-}
-
 // LEVELS
 
 let gameIsOver = false;
