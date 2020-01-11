@@ -2,7 +2,7 @@ Netlify link : http://kangouscape-game.netlify.com/
 
 ## Kangouscape
 
-## Group member:
+## Group members:
 
 - Hamouche Réda
 - Paulos Wendy
