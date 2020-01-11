@@ -1,4 +1,4 @@
-Netlify link : https://kangoofire.netlify.com/
+Netlify link : https://kangoufire.netlify.com/
 
 ## Kangoufire
 
