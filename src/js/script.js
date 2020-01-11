@@ -396,9 +396,6 @@ function displayLvlText(string) {
 
 function decreaseLife(lifebar) {
   limit += 20;
-  if (limit == 220) {
-    lifebar.style.animation = "blink 0.1s infinite";
-  }
   if (limit == 320) {
     gameOver();
   }
@@ -578,6 +575,7 @@ function playerHasAllBabies() {
 }
 
 // AUDIO
+let soundMuted = false;
 
 let fireSound = new Audio();
 fireSound.src = require("../assets/audio/fire.mp3");
@@ -608,6 +606,7 @@ switch2Sound.src = require("../assets/audio/switch-02.mp3");
 
 function playAudio(str) {
   let random = oxo.utils.getRandomNumber(1, 2);
+  if (soundMuted) return;
   switch (str) {
     case "fire":
       fireSound.play();
