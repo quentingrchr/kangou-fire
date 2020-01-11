@@ -1,6 +1,6 @@
 Netlify link : https://kangoofire.netlify.com/
 
-## Kangouscape
+## Kangoufire
 
 ## Group members:
 
