@@ -671,6 +671,7 @@ function gameOver() {
       oxo.inputs.listenKey("enter", function(key) {
         let storage = storageLvl();
         window.sessionStorage.setItem("level", storage);
+        window.sessionStorage.setItem("soundMuted", soundMuted);
         window.location.reload();
       });
     });
@@ -710,7 +711,13 @@ oxo.screens.loadScreen("home", function() {
       loadGameBg();
       initControls(gridAv, avant);
       spaceSwitchScreens();
-      console.log(window.sessionStorage.getItem("level"));
+      if (window.sessionStorage.getItem("soundMuted")) {
+        let value = window.sessionStorage.getItem("soundMuted");
+        console.log(value);
+        soundMuted = value === "true" ? true : false;
+      }
+      {
+      }
     });
   });
 });
