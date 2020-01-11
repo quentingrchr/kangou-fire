@@ -141,6 +141,10 @@ function getClass(x) {
       res = "baby";
       break;
 
+    case 9:
+      res = "kangoo-on-fire";
+      break;
+
     default:
       break;
   }
@@ -157,6 +161,10 @@ function swapKangooTo(oldGrid, grid) {
   let kangooRow = posKangoo[0];
   let kangooColumn = posKangoo[1];
   eraseKangooInGrid(kangooRow, kangooColumn, grid);
+  if (grid[oldRow][oldColumn] === 5) {
+    grid[oldRow][oldColumn] = 9;
+    return;
+  }
   grid[oldRow][oldColumn] = 6;
 }
 function checkSwapeIsPossible() {
