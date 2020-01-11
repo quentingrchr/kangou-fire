@@ -1,4 +1,4 @@
-Netlify link : http://kangouscape-game.netlify.com/
+Netlify link : https://kangoofire.netlify.com/
 
 ## Kangouscape
 
