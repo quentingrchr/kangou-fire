@@ -11,6 +11,7 @@
 let gridAv = [];
 let gridAp = [];
 
+// ALL LEVELS GRIDS ARE HERE
 let gridLvl1Av = [
   [7, 0, 0, 1, 0, 0, 0, 0, 0, 0],
   [0, 0, 1, 1, 0, 1, 0, 1, 0, 0],
@@ -87,6 +88,32 @@ let gridLvl3Ap = [
   [3, 0, 3, 8, 5, 0, 5, 3, 3, 0],
   [0, 0, 0, 3, 3, 5, 0, 0, 0, 0],
   [6, 0, 5, 0, 0, 0, 0, 0, 3, 3]
+];
+
+let gridLvl4Av = [
+  [1, 0, 0, 8, 2, 8, 0, 0, 0, 0],
+  [0, 8, 1, 1, 0, 1, 1, 1, 0, 2],
+  [2, 2, 0, 8, 2, 0, 2, 0, 2, 8],
+  [8, 1, 0, 0, 2, 0, 8, 1, 1, 0],
+  [0, 1, 2, 1, 6, 2, 2, 0, 1, 0],
+  [0, 1, 0, 2, 0, 2, 0, 2, 1, 0],
+  [0, 1, 0, 0, 2, 1, 0, 0, 1, 0],
+  [0, 2, 0, 2, 0, 0, 0, 2, 0, 0],
+  [0, 0, 1, 0, 1, 1, 1, 1, 0, 7],
+  [8, 2, 0, 1, 0, 8, 2, 0, 0, 0]
+];
+
+let gridLvl4Ap = [
+  [1, 0, 0, 8, 5, 8, 0, 0, 0, 0],
+  [0, 8, 1, 1, 0, 0, 1, 1, 0, 5],
+  [5, 5, 0, 8, 5, 0, 5, 0, 5, 8],
+  [8, 1, 0, 0, 5, 0, 8, 0, 1, 0],
+  [0, 1, 5, 0, 6, 5, 5, 0, 1, 0],
+  [0, 1, 0, 5, 0, 5, 0, 5, 1, 0],
+  [0, 1, 0, 0, 5, 1, 0, 0, 1, 0],
+  [0, 5, 0, 5, 0, 0, 0, 5, 0, 0],
+  [0, 0, 1, 0, 1, 1, 0, 1, 0, 7],
+  [8, 5, 0, 0, 0, 8, 5, 0, 0, 0]
 ];
 
 /////////////////////////////////////
@@ -452,6 +479,7 @@ let gameIsOver = false;
 let lvl1Comp = false;
 let lvl2Comp = false;
 let lvl3Comp = false;
+let lvl4comp = false;
 let limit = 0;
 
 function resetLifebar() {
@@ -492,6 +520,23 @@ function loadLvl3() {
   resetLifebar();
   console.log("LEVEL 3 LOADED");
 }
+function loadLvl4() {
+  displayLvlText(4);
+  gridAv = gridLvl4Av;
+  gridAp = gridLvl4Ap;
+  let avant = document.getElementById("avant");
+  loadGrid(gridAv, avant);
+  resetScreen();
+  resetBabies();
+  resetLifebar();
+  console.log("LEVEL 4 LOADED");
+}
+function reloadLvl1() {
+  displayLvlText(1);
+  gridAv = gridLvl1Av;
+  gridAp = gridLvl1Ap;
+  console.log("LEVEL 1 LOADED");
+}
 
 function reloadLvl2() {
   displayLvlText(2);
@@ -506,23 +551,26 @@ function reloadLvl3() {
   gridAp = gridLvl3Ap;
   console.log("LEVEL 3 LOADED");
 }
-
-function reloadLvl1() {
-  displayLvlText(1);
-  gridAv = gridLvl1Av;
-  gridAp = gridLvl1Ap;
-  console.log("LEVEL 1 LOADED");
+function reloadLvl4() {
+  displayLvlText(4);
+  gridAv = gridLvl4Av;
+  gridAp = gridLvl4Ap;
+  console.log("LEVEL 3 LOADED");
 }
 
 function levelCompleted() {
-  if (lvl1Comp && lvl2Comp) {
-    lvl3Comp = true;
+  if (lvl1Comp && lvl2Comp && lvl3Comp) {
+    lvl4Comp = true;
     oxo.screens.loadScreen("endgame", function() {
       playAudio("win");
       oxo.inputs.listenKey("enter", function() {
         window.location.reload();
       });
     });
+  } else if (lvl1Comp && lvl2Comp) {
+    lvl3Comp = true;
+    loadLvl4();
+    // LOAD LVL 3
   } else if (lvl1Comp) {
     lvl2Comp = true;
     loadLvl3();
@@ -535,7 +583,9 @@ function levelCompleted() {
 }
 
 function storageLvl() {
-  if (lvl1Comp && lvl2Comp) {
+  if (lvl1Comp && lvl2Comp && lvl3Comp) {
+    return "4";
+  } else if (lvl1Comp && lvl2Comp) {
     return "3";
   } else if (lvl1Comp) {
     return "2";
@@ -711,6 +761,12 @@ oxo.screens.loadScreen("home", function() {
             lvl1Comp = true;
             lvl2Comp = true;
             reloadLvl3();
+            break;
+          case "4":
+            lvl1Comp = true;
+            lvl2Comp = true;
+            lvl3Comp = true;
+            reloadLvl4();
             break;
           case "1":
             reloadLvl1();
