@@ -11,6 +11,22 @@ body {
   overflow: hidden;
 }
 
+body::after {
+  // PRELOAD IMG
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  z-index: -1; // hide images
+  content: url("../assets/img/bg-avant.png") url("../assets/img/bg-apres.png")
+    url("../assets/img/kangoo-up.gif") url("../assets/img/kangoo-down.gif")
+    url("../assets/img/kangoo-right.gif") url("../assets/img/kangoo-left.gif")
+    url("../assets/img/kangoo-on-fire.gif") url("../assets/img/tree.png")
+    url("../assets/img/rock.png") url("../assets/img/treeonfire.png")
+    url("../assets/img/fire.gif") url("../assets/img/forestbg.png")
+    url("../assets/img/forestfirebg.png");
+}
+
 section {
   width: 700px;
   height: 700px;
@@ -94,12 +110,6 @@ section {
   background-image: url("../assets/img/treeonfire.png");
   background-size: cover;
 }
-
-// .ashes {
-//   background-image: url("../assets/img/ashes.png");
-//   background-position: bottom;
-//   background-repeat: no-repeat;
-// }
 
 .fire {
   background-image: url("../assets/img/fire.gif");
