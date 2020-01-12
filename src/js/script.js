@@ -588,6 +588,12 @@ oxo.inputs.listenKey("s", () => {
   }
 });
 
+function playSound(sound) {
+  // TO RETRIGGER THE SOUND REGARDLESS IT'S FINSIHED
+  let click = sound.cloneNode();
+  click.play();
+}
+
 let soundMuted = false;
 
 let fireSound = new Audio();
@@ -629,9 +635,13 @@ function playAudio(str) {
       break;
     case "jump":
       if (random === 1) {
-        jump1Sound.play();
+        jump1Sound.preload = "auto";
+        jump1Sound.load();
+        playSound(jump1Sound);
       } else {
-        jump2Sound.play();
+        jump2Sound.preload = "auto";
+        jump2Sound.load();
+        playSound(jump2Sound);
       }
       break;
     case "lose":
@@ -679,7 +689,7 @@ function gameOver() {
         window.location.reload();
       });
     });
-  }, 1000);
+  }, 1400);
 }
 
 // SCRIPT
