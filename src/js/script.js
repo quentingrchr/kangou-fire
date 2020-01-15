@@ -39,6 +39,31 @@ let gridLvl1Ap = [
 ];
 
 let gridLvl2Av = [
+  [8, 0, 1, 0, 0, 0, 2, 8, 0, 1],
+  [0, 2, 1, 8, 1, 0, 8, 2, 0, 0],
+  [1, 0, 1, 1, 1, 1, 1, 8, 1, 0],
+  [0, 2, 0, 0, 1, 0, 0, 1, 0, 0],
+  [1, 1, 1, 0, 1, 0, 0, 1, 0, 0],
+  [1, 0, 0, 0, 2, 0, 8, 0, 2, 1],
+  [1, 0, 0, 1, 1, 1, 2, 1, 0, 0],
+  [1, 0, 0, 0, 2, 0, 8, 1, 1, 1],
+  [1, 1, 1, 1, 0, 2, 0, 1, 6, 0],
+  [8, 0, 0, 1, 0, 0, 0, 1, 0, 7]
+];
+let gridLvl2Ap = [
+  [8, 0, 3, 0, 0, 0, 5, 8, 0, 3],
+  [0, 5, 3, 8, 3, 0, 8, 5, 0, 0],
+  [3, 0, 3, 0, 3, 0, 3, 8, 3, 0],
+  [0, 5, 0, 0, 3, 0, 0, 3, 0, 0],
+  [3, 0, 3, 0, 3, 0, 0, 3, 0, 0],
+  [3, 0, 0, 0, 5, 0, 8, 0, 5, 0],
+  [3, 0, 0, 3, 3, 3, 5, 3, 0, 0],
+  [3, 0, 0, 0, 5, 0, 8, 3, 0, 3],
+  [3, 3, 3, 3, 0, 5, 0, 3, 6, 0],
+  [8, 0, 0, 0, 0, 0, 0, 3, 0, 7]
+];
+
+let gridLvl3Av = [
   [0, 7, 1, 0, 0, 0, 2, 0, 0, 0],
   [0, 0, 1, 1, 8, 1, 1, 0, 0, 0],
   [2, 1, 1, 0, 2, 0, 0, 1, 2, 1],
@@ -51,7 +76,7 @@ let gridLvl2Av = [
   [1, 8, 1, 1, 1, 6, 1, 0, 8, 0]
 ];
 
-let gridLvl2Ap = [
+let gridLvl3Ap = [
   [0, 7, 3, 0, 0, 0, 5, 0, 0, 0],
   [0, 0, 3, 3, 8, 3, 3, 0, 0, 0],
   [5, 3, 3, 0, 5, 0, 0, 3, 5, 3],
@@ -64,7 +89,7 @@ let gridLvl2Ap = [
   [3, 8, 3, 3, 3, 6, 3, 0, 8, 0]
 ];
 
-let gridLvl3Av = [
+let gridLvl4Av = [
   [0, 1, 7, 0, 0, 1, 1, 1, 8, 0],
   [0, 8, 1, 0, 8, 0, 1, 0, 1, 0],
   [0, 1, 1, 1, 0, 1, 0, 1, 0, 0],
@@ -77,7 +102,7 @@ let gridLvl3Av = [
   [6, 0, 2, 0, 0, 0, 0, 0, 1, 1]
 ];
 
-let gridLvl3Ap = [
+let gridLvl4Ap = [
   [0, 3, 7, 0, 0, 3, 3, 3, 8, 0],
   [0, 8, 3, 0, 8, 0, 3, 0, 3, 0],
   [0, 3, 3, 3, 0, 3, 0, 0, 0, 0],
@@ -90,7 +115,7 @@ let gridLvl3Ap = [
   [6, 0, 5, 0, 0, 0, 0, 0, 3, 3]
 ];
 
-let gridLvl4Av = [
+let gridLvl5Av = [
   [1, 0, 0, 8, 2, 8, 0, 0, 0, 0],
   [0, 8, 1, 1, 0, 1, 1, 1, 0, 2],
   [2, 2, 0, 8, 2, 0, 2, 0, 2, 8],
@@ -103,7 +128,7 @@ let gridLvl4Av = [
   [8, 2, 0, 1, 0, 8, 2, 0, 0, 0]
 ];
 
-let gridLvl4Ap = [
+let gridLvl5Ap = [
   [3, 0, 0, 8, 5, 8, 0, 0, 0, 0],
   [0, 8, 3, 3, 0, 0, 3, 3, 0, 5],
   [5, 5, 0, 8, 5, 0, 5, 0, 5, 8],
@@ -480,6 +505,7 @@ let lvl1Comp = false;
 let lvl2Comp = false;
 let lvl3Comp = false;
 let lvl4comp = false;
+let lvl5Comp = false;
 let limit = 0;
 
 function resetLifebar() {
@@ -531,6 +557,17 @@ function loadLvl4() {
   resetLifebar();
   console.log("LEVEL 4 LOADED");
 }
+function loadLvl5() {
+  displayLvlText(5);
+  gridAv = gridLvl5Av;
+  gridAp = gridLvl5Ap;
+  let avant = document.getElementById("avant");
+  loadGrid(gridAv, avant);
+  resetScreen();
+  resetBabies();
+  resetLifebar();
+  console.log("LEVEL 5 LOADED");
+}
 function reloadLvl1() {
   displayLvlText(1);
   gridAv = gridLvl1Av;
@@ -557,20 +594,30 @@ function reloadLvl4() {
   gridAp = gridLvl4Ap;
   console.log("LEVEL 3 LOADED");
 }
+function reloadLvl5() {
+  displayLvlText(5);
+  gridAv = gridLvl5Av;
+  gridAp = gridLvl5Ap;
+  console.log("LEVEL 3 LOADED");
+}
 
 function levelCompleted() {
-  if (lvl1Comp && lvl2Comp && lvl3Comp) {
-    lvl4Comp = true;
+  if (lvl1Comp && lvl2Comp && lvl3Comp && lvl4comp) {
+    lvl5Comp = true;
     oxo.screens.loadScreen("endgame", function() {
       playAudio("win");
       oxo.inputs.listenKey("enter", function() {
         window.location.reload();
       });
     });
+  } else if (lvl1Comp && lvl2Comp && lvl3Comp) {
+    lvl4Comp = true;
+    loadLvl5();
+    // LOAD LVL 5
   } else if (lvl1Comp && lvl2Comp) {
     lvl3Comp = true;
     loadLvl4();
-    // LOAD LVL 3
+    // LOAD LVL 4
   } else if (lvl1Comp) {
     lvl2Comp = true;
     loadLvl3();
@@ -583,7 +630,9 @@ function levelCompleted() {
 }
 
 function storageLvl() {
-  if (lvl1Comp && lvl2Comp && lvl3Comp) {
+  if (lvl1Comp && lvl2Comp && lvl3Comp && lvl4comp) {
+    return "5";
+  } else if (lvl1Comp && lvl2Comp && lvl3Comp) {
     return "4";
   } else if (lvl1Comp && lvl2Comp) {
     return "3";
@@ -767,6 +816,13 @@ oxo.screens.loadScreen("home", function() {
             lvl2Comp = true;
             lvl3Comp = true;
             reloadLvl4();
+            break;
+          case "5":
+            lvl1Comp = true;
+            lvl2Comp = true;
+            lvl3Comp = true;
+            lvl4comp = true;
+            reloadLvl5();
             break;
           case "1":
             reloadLvl1();
