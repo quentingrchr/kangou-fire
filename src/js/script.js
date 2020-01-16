@@ -269,6 +269,7 @@ function switchScreenWDamage() {
   switchScreen();
   const lifebar = document.getElementById("life");
   decreaseLife(lifebar);
+  console.log("your life has decreased by 1/16");
 }
 
 function switchScreen() {
@@ -510,7 +511,7 @@ let gameIsOver = false;
 let lvl1Comp = false;
 let lvl2Comp = false;
 let lvl3Comp = false;
-let lvl4comp = false;
+let lvl4Comp = false;
 let lvl5Comp = false;
 let limit = 0;
 
@@ -608,7 +609,7 @@ function reloadLvl5() {
 }
 
 function levelCompleted() {
-  if (lvl1Comp && lvl2Comp && lvl3Comp && lvl4comp) {
+  if (lvl1Comp && lvl2Comp && lvl3Comp && lvl4Comp) {
     lvl5Comp = true;
     oxo.screens.loadScreen("endgame", function() {
       playAudio("win");
@@ -618,6 +619,7 @@ function levelCompleted() {
     });
   } else if (lvl1Comp && lvl2Comp && lvl3Comp) {
     lvl4Comp = true;
+    console.log(lvl4Comp);
     loadLvl5();
     // LOAD LVL 5
   } else if (lvl1Comp && lvl2Comp) {
@@ -636,7 +638,7 @@ function levelCompleted() {
 }
 
 function storageLvl() {
-  if (lvl1Comp && lvl2Comp && lvl3Comp && lvl4comp) {
+  if (lvl1Comp && lvl2Comp && lvl3Comp && lvl4Comp) {
     return "5";
   } else if (lvl1Comp && lvl2Comp && lvl3Comp) {
     return "4";
@@ -814,7 +816,7 @@ oxo.screens.loadScreen("home", function() {
             lvl1Comp = true;
             lvl2Comp = true;
             lvl3Comp = true;
-            lvl4comp = true;
+            lvl4Comp = true;
             reloadLvl5();
             break;
           case "4":
