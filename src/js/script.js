@@ -11,30 +11,56 @@
 let gridAv = [];
 let gridAp = [];
 
+// let gridLvl1Av = [
+//   [7, 0, 0, 1, 0, 0, 0, 0, 0, 0],
+//   [0, 0, 1, 1, 0, 1, 0, 1, 0, 0],
+//   [0, 1, 1, 1, 1, 1, 2, 2, 0, 0],
+//   [0, 1, 0, 0, 1, 0, 0, 0, 1, 0],
+//   [0, 1, 0, 1, 0, 1, 1, 0, 1, 1],
+//   [1, 1, 0, 1, 1, 1, 0, 0, 0, 0],
+//   [1, 0, 0, 0, 0, 0, 1, 1, 1, 1],
+//   [1, 1, 1, 0, 1, 0, 1, 8, 1, 0],
+//   [1, 0, 0, 2, 2, 0, 1, 1, 1, 0],
+//   [6, 0, 0, 0, 0, 2, 0, 0, 1, 0]
+// ];
+
+// let gridLvl1Ap = [
+//   [7, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+//   [0, 0, 3, 3, 0, 3, 0, 3, 0, 0],
+//   [0, 3, 3, 3, 3, 3, 5, 5, 0, 0],
+//   [0, 3, 0, 0, 0, 0, 0, 0, 3, 0],
+//   [0, 3, 0, 3, 0, 3, 3, 0, 3, 3],
+//   [3, 3, 0, 3, 3, 3, 0, 0, 0, 0],
+//   [3, 0, 0, 0, 0, 0, 3, 0, 3, 3],
+//   [3, 3, 3, 0, 3, 0, 3, 8, 3, 0],
+//   [3, 0, 0, 5, 5, 0, 3, 3, 3, 0],
+//   [6, 0, 0, 0, 0, 5, 0, 0, 3, 0]
+// ];
+
 let gridLvl1Av = [
-  [7, 0, 0, 1, 0, 0, 0, 0, 0, 0],
-  [0, 0, 1, 1, 0, 1, 0, 1, 0, 0],
-  [0, 1, 1, 1, 1, 1, 2, 2, 0, 0],
-  [0, 1, 0, 0, 1, 0, 0, 0, 1, 0],
-  [0, 1, 0, 1, 0, 1, 1, 0, 1, 1],
-  [1, 1, 0, 1, 1, 1, 0, 0, 0, 0],
-  [1, 0, 0, 0, 0, 0, 1, 1, 1, 1],
-  [1, 1, 1, 0, 1, 0, 1, 8, 1, 0],
-  [1, 0, 0, 2, 2, 0, 1, 1, 1, 0],
-  [6, 0, 0, 0, 0, 2, 0, 0, 1, 0]
+  [0, 0, 1, 0, 1, 0, 0, 7, 0, 0],
+  [0, 0, 1, 0, 1, 0, 0, 0, 0, 0],
+  [0, 0, 1, 0, 1, 0, 0, 0, 0, 0],
+  [0, 0, 1, 0, 1, 0, 0, 0, 0, 0],
+  [0, 0, 1, 0, 1, 1, 1, 1, 1, 1],
+  [0, 0, 1, 0, 0, 0, 0, 0, 0, 0],
+  [1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  [1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+  [0, 0, 6, 0, 0, 0, 0, 0, 0, 0]
 ];
 
 let gridLvl1Ap = [
-  [7, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-  [0, 0, 3, 3, 0, 3, 0, 3, 0, 0],
-  [0, 3, 3, 3, 3, 3, 5, 5, 0, 0],
-  [0, 3, 0, 0, 0, 0, 0, 0, 3, 0],
-  [0, 3, 0, 3, 0, 3, 3, 0, 3, 3],
-  [3, 3, 0, 3, 3, 3, 0, 0, 0, 0],
-  [3, 0, 0, 0, 0, 0, 3, 0, 3, 3],
-  [3, 3, 3, 0, 3, 0, 3, 8, 3, 0],
-  [3, 0, 0, 5, 5, 0, 3, 3, 3, 0],
-  [6, 0, 0, 0, 0, 5, 0, 0, 3, 0]
+  [0, 0, 0, 0, 0, 0, 0, 7, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 6, 0, 0, 0, 0, 0, 0, 0]
 ];
 
 let gridLvl2Av = [
@@ -206,6 +232,9 @@ function eraseKangooInGrid(row, column, grid) {
 
 function spaceSwitchScreens() {
   oxo.inputs.listenKey("space", function() {
+    if (lvlBonus && getCurrentScreen() == "avant") {
+      randomizeGrid();
+    }
     switchScreen();
   });
 }
@@ -452,6 +481,7 @@ let gameIsOver = false;
 let lvl1Comp = false;
 let lvl2Comp = false;
 let lvl3Comp = false;
+let lvlBonus = true;
 let limit = 0;
 
 function resetLifebar() {
@@ -735,3 +765,26 @@ oxo.screens.loadScreen("home", function() {
     });
   });
 });
+
+function randomizeGrid() {
+  let grid = gridAp; // UNIQUEMENT VALABLE POUR LA GRID APRES
+  let rows = 10;
+  let columns = 10;
+  for (let row = 0; row < rows; row++) {
+    for (let column = 0; column < columns; column++) {
+      // PARCOURS CHAQUE CASE DE LA GRID
+      let random = oxo.utils.getRandomNumber(1, 2); // GENERE UN INT RANDOM POUR CHAQUE CASE
+      if (grid[row][column] === 6 || grid[row][column] === 7) {
+        // SI LA CASE EST CELLE DU KANGOO OU DE LA SORTIE ALORS ON CHANGE RIEN
+        break;
+      }
+      if (random == 1) {
+        // SINON SI LE RANDOM INT EST 1 LA CASE DEVIENT DU FEU
+        grid[row][column] = 5;
+      } else {
+        //  SI LE RANDOM INT EST 0 LA CASE EST VIDE
+        grid[row][column] = 0;
+      }
+    }
+  }
+}
