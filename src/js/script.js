@@ -233,6 +233,7 @@ function checkSwapeIsPossible() {
     if (newGrid[row][column] === 5) {
       gameOver();
       playAudio("fire");
+      console.log("KANGOO SWITCHED ON FIRE");
     }
 
     return true;
@@ -258,13 +259,19 @@ function eraseKangooInGrid(row, column, grid) {
 
 function spaceSwitchScreens() {
   oxo.inputs.listenKey("space", function() {
-    switchScreen();
+    switchScreenWDamage();
   });
 }
 
-function switchScreen() {
+function switchScreenWDamage() {
   if (gameIsOver) return;
   if (!checkSwapeIsPossible()) return;
+  switchScreen();
+  const lifebar = document.getElementById("life");
+  decreaseLife(lifebar);
+}
+
+function switchScreen() {
   const gameBg = document.querySelector(".bg");
   gameBg.classList.toggle("bg--ap");
   avant.classList.toggle("hidden-display");
@@ -285,8 +292,6 @@ function switchScreen() {
     initControls(currentGrid, element);
   }
   loadGrid(currentGrid, element);
-  const lifebar = document.getElementById("life");
-  decreaseLife(lifebar);
   playAudio("switch");
 }
 
@@ -458,6 +463,7 @@ function decreaseLife(lifebar) {
   limit += 20;
   if (limit == 320) {
     gameOver();
+    console.log("KANGOO HAS NO MORE LIFE");
   }
   lifebar.style.transform = `translateY(${limit}px)`;
   lifebar.classList.add("blink");
@@ -784,6 +790,7 @@ function gameOver() {
       oxo.inputs.listenKey("enter", function(key) {
         let storage = storageLvl();
         window.sessionStorage.setItem("level", storage);
+        console.log("YOU'LL RESTART ON LVL " + storage);
         window.sessionStorage.setItem("soundMuted", soundMuted);
         window.location.reload();
       });
@@ -801,6 +808,7 @@ oxo.screens.loadScreen("home", function() {
 
       if (window.sessionStorage.getItem("level")) {
         let key = window.sessionStorage.getItem("level");
+        console.log("RESTARTING ON LVL " + key);
         switch (key) {
           case "5":
             lvl1Comp = true;
