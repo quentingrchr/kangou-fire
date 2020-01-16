@@ -592,13 +592,13 @@ function reloadLvl4() {
   displayLvlText(4);
   gridAv = gridLvl4Av;
   gridAp = gridLvl4Ap;
-  console.log("LEVEL 3 LOADED");
+  console.log("LEVEL 4 LOADED");
 }
 function reloadLvl5() {
   displayLvlText(5);
   gridAv = gridLvl5Av;
   gridAp = gridLvl5Ap;
-  console.log("LEVEL 3 LOADED");
+  console.log("LEVEL 5 LOADED");
 }
 
 function levelCompleted() {
@@ -802,14 +802,12 @@ oxo.screens.loadScreen("home", function() {
       if (window.sessionStorage.getItem("level")) {
         let key = window.sessionStorage.getItem("level");
         switch (key) {
-          case "2":
-            lvl1Comp = true;
-            reloadLvl2();
-            break;
-          case "3":
+          case "5":
             lvl1Comp = true;
             lvl2Comp = true;
-            reloadLvl3();
+            lvl3Comp = true;
+            lvl4comp = true;
+            reloadLvl5();
             break;
           case "4":
             lvl1Comp = true;
@@ -817,12 +815,14 @@ oxo.screens.loadScreen("home", function() {
             lvl3Comp = true;
             reloadLvl4();
             break;
-          case "5":
+          case "3":
             lvl1Comp = true;
             lvl2Comp = true;
-            lvl3Comp = true;
-            lvl4comp = true;
-            reloadLvl5();
+            reloadLvl3();
+            break;
+          case "2":
+            lvl1Comp = true;
+            reloadLvl2();
             break;
           case "1":
             reloadLvl1();
