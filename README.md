@@ -20,7 +20,7 @@ The game uses two dimensional javascript array to store all the levels informati
 **The game currently have 5 levels**
 ![figma screenshot](readme-assets/figma-level-design.png)
 
-## Group members of Kangou fire
+## Group members of Kangou Fire
 
 - [Wendy Paulos](https://github.com/WPaulos)
 - [Reda Hamouche](https://github.com/RedaHamouche)
