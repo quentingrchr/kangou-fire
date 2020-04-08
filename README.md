@@ -1,42 +1,28 @@
-Netlify link : https://kangoufire.netlify.com/
+# KANGOU FIRE
 
-Use the following link to design your own level: https://www.figma.com/file/xstMf51b8kHpvMbyC2w0Vm/Untitled?node-id=0%3A1
+[Go to website](https://kangoufire.netlify.com/)
 
-Send a request to implement your level on our game to this e-mail: reda.hamouche@outlook.com
+[![homepage screenshot](readme-assets/homepage.gif)](https://kangoufire.netlify.com/)
 
-## Kangoufire
+This is a vanilla javascript **2D maze game** based around the fact that the player can swap between environments.
+You're playing a kangourou in Australia forest, and you'll have find you way to the burrow. To get to the burrow you can push rocks or you can press **SPACE BAR** to swap on the second environment, but be careful to not swap on fire.
 
-## Group members:
+![level screenshot](readme-assets/level1.gif)
 
-- Hamouche Réda
-- Paulos Wendy
-- Grancher Quentin
-- Attar Ramtim
+## Go hard or go home
 
-## Clone and cd into the repository and run
+This game is **not easy** and you'll certainly not win the game without dying. This is why we added an auto-save feature using session.storage(). Just make sure to not close the windows or you'll lose all your progression.
 
-```shell
-npm install
-```
+## Game Design
 
-## Development mode
+The game uses two dimensional javascript array to store all the levels information which was designed in Figma, making the implementation of new levels to the game easier.
 
-```shell
-npm run dev
-```
+**The game currently have 5 levels**
+![figma screenshot](readme-assets/figma-level-design.png)
 
-Open
+## Group members of Kangou fire
 
-```shell
-localhost:1234/index.html
-```
-
-Don't forget the index.html part !
-
-## Production mode
-
-```shell
-npm run build
-```
-
-Serve the dist folder.
+- [Wendy Paulos](https://github.com/WPaulos)
+- [Reda Hamouche](https://github.com/RedaHamouche)
+- [Quentin Grancher](https://kangoufire.netlify.com/)
+- [Attar Ramtim](https://github.com/ramtinattar)
