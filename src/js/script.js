@@ -852,6 +852,7 @@ oxo.screens.loadScreen("home", function() {
         console.log(value);
         soundMuted = value === "true" ? true : false;
       }
+      alert('Press S to mute / unmute sounds");
       {
       }
     });
