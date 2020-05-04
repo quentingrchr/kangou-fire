@@ -22,7 +22,7 @@ let gridLvl1Av = [
   [1, 0, 0, 0, 0, 0, 1, 1, 1, 1],
   [1, 1, 1, 0, 1, 0, 1, 8, 1, 0],
   [1, 0, 0, 2, 2, 0, 1, 1, 1, 0],
-  [6, 0, 0, 0, 0, 2, 0, 0, 1, 0]
+  [6, 0, 0, 0, 0, 2, 0, 0, 1, 0],
 ];
 
 let gridLvl1Ap = [
@@ -35,7 +35,7 @@ let gridLvl1Ap = [
   [3, 0, 0, 0, 0, 0, 3, 0, 3, 3],
   [3, 3, 3, 0, 3, 0, 3, 8, 3, 0],
   [3, 0, 0, 5, 5, 0, 3, 3, 3, 0],
-  [6, 0, 0, 0, 0, 5, 0, 0, 3, 0]
+  [6, 0, 0, 0, 0, 5, 0, 0, 3, 0],
 ];
 
 let gridLvl2Av = [
@@ -48,7 +48,7 @@ let gridLvl2Av = [
   [1, 0, 0, 1, 1, 1, 2, 1, 0, 0],
   [1, 0, 0, 0, 2, 0, 8, 1, 1, 1],
   [1, 1, 1, 1, 0, 2, 0, 1, 6, 0],
-  [8, 0, 0, 1, 0, 0, 0, 1, 0, 7]
+  [8, 0, 0, 1, 0, 0, 0, 1, 0, 7],
 ];
 let gridLvl2Ap = [
   [8, 0, 3, 0, 0, 0, 5, 8, 0, 3],
@@ -60,7 +60,7 @@ let gridLvl2Ap = [
   [3, 0, 0, 3, 3, 3, 5, 3, 0, 0],
   [3, 0, 0, 0, 5, 0, 8, 3, 0, 3],
   [3, 3, 3, 3, 0, 5, 0, 3, 6, 0],
-  [8, 0, 0, 0, 0, 0, 0, 3, 0, 7]
+  [8, 0, 0, 0, 0, 0, 0, 3, 0, 7],
 ];
 
 let gridLvl3Av = [
@@ -73,7 +73,7 @@ let gridLvl3Av = [
   [1, 0, 0, 0, 2, 0, 2, 0, 0, 0],
   [1, 0, 1, 0, 1, 0, 1, 1, 1, 1],
   [0, 2, 0, 2, 0, 0, 1, 0, 0, 0],
-  [1, 8, 1, 1, 1, 6, 1, 0, 8, 0]
+  [1, 8, 1, 1, 1, 6, 1, 0, 8, 0],
 ];
 
 let gridLvl3Ap = [
@@ -86,7 +86,7 @@ let gridLvl3Ap = [
   [3, 0, 0, 0, 5, 0, 5, 0, 0, 0],
   [3, 0, 0, 0, 3, 0, 3, 0, 3, 0],
   [0, 5, 0, 5, 0, 0, 3, 0, 0, 0],
-  [3, 8, 3, 3, 3, 6, 3, 0, 8, 0]
+  [3, 8, 3, 3, 3, 6, 3, 0, 8, 0],
 ];
 
 let gridLvl4Av = [
@@ -99,7 +99,7 @@ let gridLvl4Av = [
   [0, 2, 0, 0, 1, 0, 2, 8, 1, 0],
   [1, 0, 1, 8, 2, 0, 2, 1, 1, 1],
   [0, 0, 0, 1, 1, 2, 0, 1, 1, 1],
-  [6, 0, 2, 0, 0, 0, 0, 0, 1, 1]
+  [6, 0, 2, 0, 0, 0, 0, 0, 1, 1],
 ];
 
 let gridLvl4Ap = [
@@ -112,7 +112,7 @@ let gridLvl4Ap = [
   [0, 5, 0, 0, 0, 0, 5, 8, 0, 0],
   [3, 0, 3, 8, 5, 0, 5, 3, 3, 0],
   [0, 0, 0, 3, 3, 5, 0, 0, 0, 0],
-  [6, 0, 5, 0, 0, 0, 0, 0, 3, 3]
+  [6, 0, 5, 0, 0, 0, 0, 0, 3, 3],
 ];
 
 let gridLvl5Av = [
@@ -125,7 +125,7 @@ let gridLvl5Av = [
   [0, 1, 0, 0, 2, 1, 0, 0, 1, 0],
   [0, 2, 0, 2, 0, 0, 8, 2, 0, 0],
   [0, 0, 1, 0, 1, 1, 1, 1, 2, 7],
-  [8, 2, 0, 1, 0, 8, 2, 0, 0, 0]
+  [8, 2, 0, 1, 0, 8, 2, 0, 0, 0],
 ];
 
 let gridLvl5Ap = [
@@ -138,7 +138,7 @@ let gridLvl5Ap = [
   [0, 3, 0, 0, 5, 3, 0, 0, 3, 0],
   [0, 5, 0, 5, 0, 0, 8, 5, 0, 0],
   [0, 0, 3, 0, 3, 3, 0, 3, 5, 7],
-  [8, 5, 0, 0, 0, 8, 5, 0, 0, 0]
+  [8, 5, 0, 0, 0, 8, 5, 0, 0, 0],
 ];
 
 /////////////////////////////////////
@@ -258,7 +258,7 @@ function eraseKangooInGrid(row, column, grid) {
 }
 
 function spaceSwitchScreens() {
-  oxo.inputs.listenKey("space", function() {
+  oxo.inputs.listenKey("space", function () {
     switchScreenWDamage();
   });
 }
@@ -447,7 +447,7 @@ function initGame() {
 }
 
 function initControls(grid, element) {
-  oxo.inputs.listenKeys(["up", "down", "left", "right"], function(key) {
+  oxo.inputs.listenKeys(["up", "down", "left", "right"], function (key) {
     if (!gameIsOver) moveKangoo(key, grid, element);
   });
 }
@@ -611,9 +611,9 @@ function reloadLvl5() {
 function levelCompleted() {
   if (lvl1Comp && lvl2Comp && lvl3Comp && lvl4Comp) {
     lvl5Comp = true;
-    oxo.screens.loadScreen("endgame", function() {
+    oxo.screens.loadScreen("endgame", function () {
       playAudio("win");
-      oxo.inputs.listenKey("enter", function() {
+      oxo.inputs.listenKey("enter", function () {
         window.location.reload();
       });
     });
@@ -661,7 +661,7 @@ function deleteBaby(row, column) {
 function resetBabies() {
   let div = document.getElementById("score");
   let toDelete = div.querySelectorAll("div");
-  toDelete.forEach(element => {
+  toDelete.forEach((element) => {
     element.remove();
   });
 }
@@ -777,7 +777,7 @@ function playAudio(str) {
 function loadGameBg() {
   const controls = document.getElementById("controls");
 
-  window.addEventListener("keydown", e => {
+  window.addEventListener("keydown", (e) => {
     if (e.which === 72) {
       controls.classList.toggle("hidden-display");
     }
@@ -787,9 +787,9 @@ function loadGameBg() {
 function gameOver() {
   gameIsOver = true;
   setTimeout(() => {
-    oxo.screens.loadScreen("gameover", function() {
+    oxo.screens.loadScreen("gameover", function () {
       playAudio("lose");
-      oxo.inputs.listenKey("enter", function(key) {
+      oxo.inputs.listenKey("enter", function (key) {
         let storage = storageLvl();
         window.sessionStorage.setItem("level", storage);
         console.log("YOU'LL RESTART ON LVL " + storage);
@@ -802,9 +802,9 @@ function gameOver() {
 
 // SCRIPT
 
-oxo.screens.loadScreen("home", function() {
-  oxo.inputs.listenKeyOnce("enter", function() {
-    oxo.screens.loadScreen("game", function() {
+oxo.screens.loadScreen("home", function () {
+  oxo.inputs.listenKeyOnce("enter", function () {
+    oxo.screens.loadScreen("game", function () {
       let avant = document.getElementById("avant");
       let apres = document.getElementById("apres");
 
@@ -852,9 +852,7 @@ oxo.screens.loadScreen("home", function() {
         console.log(value);
         soundMuted = value === "true" ? true : false;
       }
-      alert('Press S to mute / unmute sounds");
-      {
-      }
+      alert("Press S to mute / unmute sounds");
     });
   });
 });
