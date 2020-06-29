@@ -1,0 +1,25 @@
+name: CI
+
+on:
+  push:
+    branches: 
+      - master
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: Install ssh pass
+      run: sudo apt update && sudo apt install -y sshpass
+    - name: create .ssh directory
+      run: mkdir ~/.ssh
+    - name: Verify Host via SSH
+      run: ssh-keyscan 15.236.145.254 >> ~/.ssh/known_hosts
+    - name: Deploy website
+      run: sshpass -e scp -r * ubuntu@15.236.145.254:/site
+      env:
+    # utilise le secret crée précédemment pour injecter une variable d'environnement appelé SSHPASS
+          SSHPASS: ${{ secrets.SSHPASS }}
