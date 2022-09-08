@@ -704,31 +704,33 @@ function playSound(sound) {
 let soundMuted = false;
 
 let fireSound = new Audio();
-fireSound.src = require("../assets/audio/fire.mp3");
+// import fireSoundSrc from "../assets/audio/fire.mp3";
+// fireSound.src = "assets/sounds/fire.mp3";
+fireSound.src = require(new URL("../assets/audio/fire.mp3", import.meta.url));
 
 let hitSound = new Audio();
-hitSound.src = require("../assets/audio/hit.mp3");
+// hitSound.src = require(new URL("../assets/audio/hit.mp3", import.meta.url));
 
 let jump1Sound = new Audio();
-jump1Sound.src = require("../assets/audio/jump-01.mp3");
+// jump1Sound.src = require(new URL("../assets/audio/jump-01.mp3", import.meta.url));
 
 let jump2Sound = new Audio();
-jump2Sound.src = require("../assets/audio/jump-02.mp3");
+// jump2Sound.src = require(new URL("../assets/audio/jump-02.mp3", import.meta.url));
 
 let loseSound = new Audio();
-loseSound.src = require("../assets/audio/lose.mp3");
-
+// loseSound.src = require(new URL("../assets/audio/lose.mp3", import.meta.url));
+// 
 let pickupSound = new Audio();
-pickupSound.src = require("../assets/audio/pickup.mp3");
+// pickupSound.src = require(new URL("../assets/audio/pickup.mp3"));
 
 let winSound = new Audio();
-winSound.src = require("../assets/audio/win.mp3");
+// winSound.src = require(new URL("../assets/audio/win.mp3"));
 
 let switch1Sound = new Audio();
-switch1Sound.src = require("../assets/audio/switch-01.mp3");
+// switch1Sound.src = require(new URL("../assets/audio/switch-01.mp3", import.meta.url));
 
 let switch2Sound = new Audio();
-switch2Sound.src = require("../assets/audio/switch-02.mp3");
+// switch2Sound.src = require(new URL("../assets/audio/switch-02.mp3", import.meta.url));
 
 function playAudio(str) {
   let random = oxo.utils.getRandomNumber(1, 2);
