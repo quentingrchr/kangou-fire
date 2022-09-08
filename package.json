@@ -4,7 +4,7 @@
   "description": "",
   "scripts": {
     "dev": "parcel src/index.html src/screens/*.html -p 3400",
-    "build": "parcel build src/index.html src/screens/*.html"
+    "build": "parcel build src/index.html src/screens/*.html --no-scope-hoist"
   },
   "keywords": [],
   "author": "",
@@ -12,10 +12,8 @@
   "devDependencies": {
     "@parcel/transformer-sass": "^2.7.0",
     "node-sass": "^4.13.0",
+    "parcel": "^2.1.1",
     "parcel-bundler": "^1.12.4",
     "sass": "^1.26.5"
-  },
-  "dependencies": {
-    "parcel": "^2.7.0"
   }
 }
